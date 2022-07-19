@@ -1,30 +1,26 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if(license !== 'None'){
-    return `[![License](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})`
-  }
-}
-// condtional statement is there a liscense
-// if so return license badge
-// if not return empty string
-//return `!text to be displayed as a badge![License](${renderLicenseLink(license)})`;
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  console.log(license)
-  if(license !== 'None'){
-    return `\n*[License](#license)\n`
+function renderLicenseBadge(License) {
+  if(License !== 'None'){
+    return `[![License](https://img.shields.io/badge/License-${License}-blue.svg)](https://opensource.org/licenses/${License})`
   }
   return '';
 }
-
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+function renderLicenseLink(License) {
+  console.log(License)
+  if(License !== 'None'){
+    return `\n*[License](#License)\n`
+  }
+  return '';
+}
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license.toLowerCase() !== 'None'){
-    return `This Application is License under ${license} \n`
+function renderLicenseSection(License) {
+  if (License.toLowerCase() !== 'None'){
+    return `This Application is License under ${License}\n`
+
   }
   return '';
 }
@@ -32,24 +28,40 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   // console.log(data)
-  return `# ${data.title}
- ${renderLicenseBadge(data.license)}
-  ### ${data.description}
+  return `# ${data.Title} 
 
-  ### ${data.tablecontents}
+ ${renderLicenseBadge(data.License)}
 
-  ### ${data.install}
+  ## Description
+  🔍 ${data.Description}
 
-  ### ${data.usage}
+  ## Table of Contents
+   * [Installation](#-Installation)
+   * [Usage](#-Usage)
+   * [Credits](#-Credits)
+   * [License](#-License)
+   * [Contributing](#-Contributing)
+   * [Tests](#-Tests)
+   * [Questions](#-Questions)
+  
+  ## Contributing Parties
+  👪 ${data.Contributing}
 
-  ### ${renderLicenseLink(data.license)}
+  ## Tests
+  💻 ${data.Tests}
 
-  ### ${data.contributing}
+  ## Questions
+  ✋ Email me with any questions: ${data.Questions}
 
-  ### ${data.tests}
+  ## Username
+  ✏️ Find my project on Github: ${data.Username}
 
-  ### ${data.questions}
+  ## Contact
+  ✉️ Email me with any questions or concerns: ${data.Contact}
 
+  ## GitHub Username
+   ${data.Username}
+  _This README was generated with ❤️ by [README-generator](https://github.com/Mkish420/MyREADME)_
 `;
 }
 
