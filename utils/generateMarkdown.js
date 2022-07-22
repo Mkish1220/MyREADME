@@ -36,14 +36,26 @@ function generateMarkdown(data) {
   🔍 ${data.Description}
 
   ## Table of Contents
-   * [Installation](#-Installation)
-   * [Usage](#-Usage)
-   * [Credits](#-Credits)
-   * [License](#-License)
-   * [Contributing](#-Contributing)
-   * [Tests](#-Tests)
-   * [Questions](#-Questions)
+   * [Installation](#installation)
+   * [Usage](#usage)
+   * [Credits](#credits)
+   * [License](#license)
+   * [Contributing](#contributing)
+   * [Tests](#tests)
+   * [Questions](#questions)
+   
+  ## Installation
+  💻 ${data.Installation}
   
+  ## Usage
+  💻 ${data.Usage}
+
+  ## Credits
+  💻 ${data.Credits}
+
+  ## License
+  💻 ${renderLicenseSection(data.License)}
+
   ## Contributing Parties
   👪 ${data.Contributing}
 
